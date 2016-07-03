@@ -2,12 +2,10 @@
 
 
 let menuHandler = document.getElementById("menu");
-menuHandler.onclick = (event) => {
-  require.ensure([], function (require) {
 
-var Menu = require('./menu');
+import Menu from './menu';
 
-var pandaMenu = new Menu.default({
+var pandaMenu = new Menu({
   title: "Меню панды",
   items: [{
     text: 'Яйца',
@@ -22,7 +20,5 @@ var pandaMenu = new Menu.default({
 });
 
 document.body.appendChild(pandaMenu.elem);
-  
-})
-}
+
 

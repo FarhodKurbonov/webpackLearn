@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/',
     filename: '[name].js'
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   module: {
     loaders: [{
       test:   /\.js$/,
@@ -25,8 +25,9 @@ module.exports = {
       test:   /\.css$/,
       // .../node_modules/css-loader/index.js!.../node_modules/autoprefixer-loader/index.js?browsers=last 2 versions!.../frontend/menu/menu.css
       loader: 'style!css!'
-    }, {
-      test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+    }, 
+     {
+       test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
       loader: 'file?name=[path][name].[ext]'
     }]
 

@@ -1,5 +1,5 @@
 'use strict';
-debugger;
+
 import './menu.css';
 
 import minus from './minus.svg';
@@ -10,7 +10,7 @@ document.body.appendChild(img);
 
 import template from './menu.jade';
 
-export  class Menu {
+export default  class Menu {
   constructor(options) {
     this.elem = document.createElement('div');
     this.elem.className = 'menu';
